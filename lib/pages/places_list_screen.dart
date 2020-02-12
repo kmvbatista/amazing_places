@@ -6,7 +6,15 @@ class PlacesListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Places'),
-        actions: <Widget>[IconButton(icon: null, onPressed: null)],
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Center(
+        child: CircularProgressIndicator(),
       ),
     );
   }
