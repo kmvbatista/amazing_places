@@ -38,14 +38,14 @@ class _ImageInputState extends State<ImageInput> {
             border: Border.all(width: 1, color: Colors.grey),
           ),
           child: _storedImage == null
-              ? Image.file(
+              ? Text(
+                  'No image taken',
+                  textAlign: TextAlign.center,
+                )
+              : Image.file(
                   _storedImage,
                   fit: BoxFit.cover,
                   width: double.infinity,
-                )
-              : Text(
-                  'No image taken',
-                  textAlign: TextAlign.center,
                 ),
         ),
         SizedBox(

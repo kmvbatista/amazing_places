@@ -25,6 +25,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
     }
     Provider.of<GreatPlaces>(context, listen: false)
         .addPlace(_titleController.text, _pickedImage);
+    Navigator.of(context).pop();
   }
 
   @override
@@ -51,6 +52,13 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                       height: 10,
                     ),
                     ImageInput(_selectImage),
+                    RaisedButton.icon(
+                      onPressed: _savePlace,
+                      icon: Icon(Icons.add),
+                      label: const Text('Add Place'),
+                      elevation: 0,
+                      color: Theme.of(context).accentColor,
+                    )
                   ],
                 ),
               ),
