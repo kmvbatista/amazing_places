@@ -6,7 +6,7 @@ import '../models/place.dart';
 class GreatPlaces with ChangeNotifier {
   List<Place> _items = [];
   List<Place> get items {
-    return [...items];
+    return _items.length == 0 ? _items : [..._items];
   }
 
   void addPlace(String pickedTitle, File pickedImage) {
