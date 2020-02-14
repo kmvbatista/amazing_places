@@ -12,6 +12,12 @@ class _LocationInputState extends State<LocationInput> {
     return Column(
       children: <Widget>[
         Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 1,
+              color: Colors.grey,
+            ),
+          ),
           height: 170,
           width: double.infinity,
           child: _previewImageUrl == null
@@ -28,18 +34,19 @@ class _LocationInputState extends State<LocationInput> {
                 ),
         ),
         Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
           children: <Widget>[
             FlatButton.icon(
               onPressed: null,
               icon: Icon(Icons.location_on),
               label: Text('Current location'),
-              textColor: Theme.of(context).primaryColor,
+              textColor: Theme.of(context).accentColor,
             ),
             FlatButton.icon(
               onPressed: null,
               icon: Icon(Icons.location_on),
               label: Text('Select on Map'),
-              textColor: Theme.of(context).primaryColor,
+              textColor: Theme.of(context).accentColor,
             ),
           ],
         )
