@@ -15,9 +15,11 @@ class _LocationInputState extends State<LocationInput> {
           height: 170,
           width: double.infinity,
           child: _previewImageUrl == null
-              ? const Text(
-                  'No location choosen',
-                  textAlign: TextAlign.center,
+              ? Center(
+                  child: const Text(
+                    'No location choosen',
+                    textAlign: TextAlign.center,
+                  ),
                 )
               : Image.network(
                   _previewImageUrl,
@@ -25,7 +27,7 @@ class _LocationInputState extends State<LocationInput> {
                   width: double.infinity,
                 ),
         ),
-        Row(
+        Wrap(
           children: <Widget>[
             FlatButton.icon(
               onPressed: null,
