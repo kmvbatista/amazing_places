@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:great_places/utils/db_util.dart';
 import 'dart:io';
 
 import '../models/place.dart';
@@ -18,5 +19,10 @@ class GreatPlaces with ChangeNotifier {
     );
     _items.add(newPlace);
     notifyListeners();
+    DButil.insert('places', {
+      'id': newPlace.id,
+      'title': newPlace.title,
+      'image': newPlace.image.path,
+    });
   }
 }
