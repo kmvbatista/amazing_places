@@ -27,7 +27,7 @@ class GreatPlaces with ChangeNotifier {
   }
 
   Future<void> fetchAndSetPlaces() async {
-    final dataList = await DButil.getData('places');
+    final dataList = await DButil.getData('user_places');
     dataList
         .map(
           (item) => Place(
